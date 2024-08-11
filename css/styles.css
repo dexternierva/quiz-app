@@ -1,6 +1,7 @@
 :root {
     --clr-primary: 236, 240, 241;
     --clr-secondary: 44, 62, 80;
+    --clr-neutral-200: 244, 244, 244;
     --clr-accent-600: 230, 126, 34;
     --clr-accent-500: 243,156, 18;
     --clr-accent-400: 241, 196, 15;
@@ -95,7 +96,7 @@ a.link:hover {
   color: rgba(var(--clr-accent-500));
 }
 
-button {
+/* button {
   border: 2px solid #333;
   background-color: white;
   border-radius: 0.25rem;
@@ -104,7 +105,7 @@ button {
 button:focus,
 a:focus {
   outline: 2px solid rgba(var(--clr-secondary), 1);
-}
+} */
 
 /* Utils Styles
 ------------------------------------------------------------- */
@@ -138,7 +139,7 @@ a:focus {
   gap: 1.5rem;
 }
 
-.profile-list.grid-container {
+.profiles.grid-container {
   grid-auto-rows: 40rem;
 }
 
@@ -278,7 +279,7 @@ a:focus {
 .card__content-header {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.5rem;
   opacity: 0;
   transform: translateY(-6rem);
   transition-property: opacity, transform;
@@ -323,4 +324,121 @@ a:focus {
 .card:hover .card__content-info {
   opacity: 1;
   transform: translateY(0);
+}
+
+/**
+ * Question Styles
+ */
+.questions-container {
+  display: none;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 2rem;
+}
+
+.question h2 {
+  margin: 0 0 10px;
+}
+
+.question ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.question li {
+  background-color: rgba(var(--clr-neutral-200));
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/**
+ * Modal Styles
+ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.modal__inner {
+  display: flex;
+}
+
+.modal__inner-img {
+  flex-basis: 50%;
+}
+
+.modal__inner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal__inner-content {
+  padding: 2rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 0 4rem 0;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Component Styles
+------------------------------------------------------------- */
+.btn {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: rgba(var(--clr-accent-600));
+  color: rgba(var(--clr-neutral-200));
+  cursor: pointer;
+  transition-property: background-color box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+.btn:hover {
+  background-color: rgba(var(--clr-accent-500));
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }

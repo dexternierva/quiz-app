@@ -31,88 +31,19 @@
   </header>
   <main class="main">
     <div class="container">
-      <div class="profiles">
+      <div class="profiles-container">
         <div class="section-header">
           <h2 class="section-header__title">Choose Your Profile</h2>
           <p class="section-header__desc">Choose a profile so you can start the test</p>
         </div>
 
-        <ul class="profile-list grid-container">
-          <li class="profile-list__item">
-            <figure class="card">
-              <a href="#"><img src="img/profile01.jpg" alt="Profile Image" class="card__img" /></a>
-              <figcaption class="card__content">
-                <div class="card__content-header">
-                  <h2 class="card__content-name">Emily Sanchez</h2>
-                  <p>Emily is a passionate wildlife photographer with a love for capturing nature's beauty.</p>
-                </div>
-                <div class="card__content-info">
-                  <div>
-                    <p class="text-sm">Position</p>
-                    <p class="text-lg">Web Developer</p>
-                  </div>
-                  <img src="img/icon-arrow-right-color.svg" class="card__content-icon" alt="Icon" />
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="profile-list__item">
-            <figure class="card">
-              <a href="#"><img src="img/profile02.jpg" alt="Profile Image"  class="card__img" /></a>
-              <figcaption class="card__content">
-                <div class="card__content-header">
-                  <h2 class="card__content-name">James Whitaker</h2>
-                  <p>James is an experienced software developer specializing in AI and machine learning technologies.</p>
-                </div>
-                <div class="card__content-info">
-                  <div>
-                    <p class="text-sm">Position</p>
-                    <p class="text-lg">Web Developer</p>
-                  </div>
-                  <img src="img/icon-arrow-right-color.svg" class="card__content-icon" alt="Icon" />
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="profile-list__item">
-              <figure class="card">
-                <a href="#"><img src="img/profile03.jpg" alt="Profile Image" class="card__img" /></a>
-                <figcaption class="card__content">
-                  <div class="card__content-header">
-                    <h2 class="card__content-name">Aisha Rahman</h2>
-                    <p>Aisha is a dedicated community organizer focused on social justice and youth empowerment.</p>
-                  </div>
-                  <div class="card__content-info">
-                    <div>
-                      <p class="text-sm">Position</p>
-                      <p class="text-lg">Web Developer</p>
-                    </div>
-                    <img src="img/icon-arrow-right-color.svg" class="card__content-icon" alt="Icon" />
-                  </div>
-                </figcaption>
-              </figure>
-          </li>
-          <li class="profile-list__item">
-            <figure class="card">
-              <a href="#"><img src="img/profile04.jpg" alt="Profile Image" class="card__img" /></a>
-              <figcaption class="card__content">
-                <div class="card__content-header">
-                  <h2 class="card__content-name">Liam O'Connor</h2>
-                  <p>Liam is a talented graphic designer known for his innovative and creative visual concepts.</p>
-                </div>
-                <div class="card__content-info">
-                  <div>
-                    <p class="text-sm">Position</p>
-                    <p class="text-lg">Web Developer</p>
-                  </div>
-                  <img src="img/icon-arrow-right-color.svg" class="card__content-icon" alt="Icon" />
-                </div>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+        <!-- Profiles Container -->
+        <ul id="profiles" class="profiles grid-container"></ul>
       </div>
-    </div>
+      
+      <!-- Questions Container -->
+      <div id="questions-container" class="questions-container"></div>
+    </div><!-- End of: container -->
   </main>
   <footer class="main-footer">
     <div class="container">
@@ -121,6 +52,15 @@
       </div>
     </div>
   </footer>
+  
+  <!-- Modal -->
+  <div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalProfileContent"></div>
+    </div>
+  </div>
+
   <!-- Here Comes Javascript -->
   <script src="js/scripts.js"></script>
 </body>
